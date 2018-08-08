@@ -1,0 +1,20 @@
+#body-container {
+    margin-top: 100px;
+}
+
+#title {
+	text-align: center;
+}
+
+.my-btn {
+	padding-left: 50px;
+    padding-right: 50px;
+}
+
+#here {
+	margin-top: 20px;
+}
+
+.user-card {
+	margin-bottom: 15px!important;
+}
