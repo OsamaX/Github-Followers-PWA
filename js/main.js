@@ -1,5 +1,5 @@
-$(document).ready(function() {
-	$("#search").on("submit", function(e) {
+$(document).ready(function () {
+	$("#search").on("submit", function (e) {
 		const username = $("#user").val()
 
 		if (username && username.trim().length > 0) {
@@ -14,9 +14,9 @@ function fetchFollowers(user) {
 	const url = `https://api.github.com/users/${user}/followers`
 	fetchFromCache(url)
 	fetch(url)
-	.then(res => res.json())
-	.then(res => populateHTML(res))
-	.catch(err => console.log(err))
+		.then(res => res.json())
+		.then(res => populateHTML(res))
+		.catch(err => console.log(err))
 }
 
 function populateHTML(data) {
@@ -52,6 +52,6 @@ function fetchFromCache(url) {
 
 if ("serviceWorker" in navigator) {
 	navigator.serviceWorker.register("./sw.js")
-	.then(sw => console.log("serviceWorker registered", sw))
-	.catch(err => console.log(err))
+		.then(sw => console.log("serviceWorker registered", sw))
+		.catch(err => console.log(err))
 }
